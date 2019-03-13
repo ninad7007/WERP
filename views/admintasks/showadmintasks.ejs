@@ -1,0 +1,37 @@
+<% include ../header %>
+<div class="container">
+
+
+     <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Intern</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+    <%for(var i=0;i<data.length;i++){%>
+        <tr>
+            <th scope="row"><%=i+1%></th>
+            <td><a href="/admin/task/<%=data[i]._id%>"><%=data[i].taskname%></a></td>
+            <td><%=data[i].description%></td>
+            <td><%=data[i].userid%></td>
+            <td><a href="/editadmintasks/<%=data[i]._id%>"><button>Edit</button></td>
+            <td><a href="/deleteadmintask/<%=data[i]._id%>"><button>Delete</button></td>
+          </tr>
+    <%}%> 
+        
+        </tbody>
+      </table>
+    <a href="/admin/adiiufbibfyyagygdsigf78767iuyfuiauiufu776f9789ds7fhhuhsh" class="btn btn-success">New Task</a>
+
+</div>
+
+
+
+<% include ../footer %>
